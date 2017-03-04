@@ -1,0 +1,13 @@
+Deep State is a simulation game built using html, css, and javascript.
+Deep State is a game a game where you play a leader of a independent spy agency.
+It is up to you to gather intelligence to sell to nations and make money to expand your operations.
+You hire agents across the globe to help you gather intelligence, influence popular opinion,
+and eventually control the political systems of the world.
+
+
+\\ Things to Implement
+Setting Generator - generator for the set pieces of the game. Ex. Office building, Military Base, Border Checkpoint, Seedy Apartment
+Actor Generator - generate full characters for use by the game and combat system.
+Extras Generator - generate characters that that can be used in non-combat roles.
+Action System - Implement an action system that allows the Actors to interact.
+SCRIPT system - As the game is text based we will need to create a system to make sure the text keep moving and is modular.

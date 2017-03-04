@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monaco, monospace;
+  font-size: .8em;
+  background: url("../img/simple_dashed_@2X.png");
+}

@@ -24,27 +24,3 @@ class Thug extends Actor {
     this.actions = [investigate, tail, layLow, extort, kill];
   }
 }
-
-
-var playerStats = {
-  agents: [jose, mark];
-  enemies: [hector, hank];
-
-}
-
-var actions = {
-  investigate: function(atk, def) {
-    let atkChance = (atk.modifiers * roll(20));
-    let defChance = (def.modifiers * roll(20));
-    if(atk.chance > def.change){
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-  kill: function(atk, def) {
-    var atkChance =
-    if(atkChance > def.chance){}
-  }
-}

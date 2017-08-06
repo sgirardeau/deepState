@@ -1,26 +1,83 @@
-//Actor Class
+//Actor Class - The basic stub class from which all specalized classes are built.
 class Actor {
   constructor(first, last, age, gender, race, nat) {
-    this.name = [first,last];
-    this.fullName = this.name[0] + " " + this.name[1];
+    this.first = first;
+    this.last = last;
+    this.fullName = this.first + " " + this.last;
     this.age = age;
     this.gender = gender;
-    this.loyality: 0;
+    this.nat = nat;
     this.atr = {
-      atk: 10,
-      def: 10,
+      str: 10,
+      agl: 10,
       int: 10,
       per: 10,
       cha: 10,
-      tec: 5
+      loy: 10
     };
     this.perks = [];
-    this.actions = [actions.investigate, actions.kill];
-  }
+    this.actions = {
+      investigate: actions.investigate,
+      tail: actions.tail,
+      recruit: actions.recruit
+    };
+  };
 }
 
 class Thug extends Actor {
   constructor(first, last, age, gender, race , nat) {
-    this.actions = [investigate, tail, layLow, extort, kill];
+    super(first, last, age, gender, nat);
+    super.fullName;
+    super.atr;
+    super.perks;
+    super.actions;
+    this.actions.kill = actions.kill;
+    this.actions.extort = actions.extort;
+  };
+}
+
+class businessMan extends Actor {
+  constructor(first, last, age, gender, race, nat) {
+    super(first, last, age, gender, race, nat);
+    super.fullName;
+    super.atr;
+    super.perks;
+    super.actions;
+    this.actions.launder = actions.launder;
   }
 }
+
+var actions = {
+  investigate: function(atk, def) {
+    console.log(atk.first + " investigates " + def.first + ".");
+    let atkChance = (atk.atr.int * roll(20));
+    let defChance = (def.atr.per * roll(20));
+    if(atkChance > defChance){
+      return true;
+    }
+    return false;
+  },
+  tail: function (atk, def) {
+    return true;
+  },
+  recruit: function(atk, def) {
+    return true;
+  },
+  kill: function(atk, def) {
+    return true;
+  },
+  extort: function(atk, def) {
+    return true;
+  },
+  launder: function(atk) {
+    return true;
+  },
+}
+//Still looking for how to implement perks. MOAR TO CUM.
+
+
+//Some test characters
+var scott = new Actor('Scott', 'Knox', 27, true, 'white', 'usa');
+var steve = new Actor('Steve', 'Wilcox', 30, true, 'black', 'usa');
+var ralph = new Thug('Ralph', 'Biggums', 35, true, 'white', 'usa');
+var james = new Thug('James', 'Marion', 29, true, 'white', 'usa');

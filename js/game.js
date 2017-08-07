@@ -92,8 +92,8 @@ function selectActor(){
 //create basic variables
   //roll initial characters
   //roll first mission
-var continue = true;
-while(continue){
+var gContinue = true;
+while(gContinue){
   var input;
 
   input = raw_input();
@@ -107,7 +107,7 @@ while(continue){
     selectEvent();
   } else
   if (input.parseInt() === 3){
-    continue = false;
+    gContinue = false;
   }
   else{
    console.API.clear()

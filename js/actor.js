@@ -77,7 +77,14 @@ var actions = {
 
 
 //Some test characters
+
 var scott = new Actor('Scott', 'Knox', 27, true, 'white', 'usa');
 var steve = new Actor('Steve', 'Wilcox', 30, true, 'black', 'usa');
 var ralph = new Thug('Ralph', 'Biggums', 35, true, 'white', 'usa');
 var james = new Thug('James', 'Marion', 29, true, 'white', 'usa');
+
+let examples = [scott,steve,ralph,james];
+
+
+export Actor as Actor;
+export examples as actorExamples;

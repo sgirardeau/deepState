@@ -1,10 +1,13 @@
-//using node syntax for testing in console
+
 
 // import Actor from './actor.js';
 // import Event from './event.js';
 //
 // import actorExamples from ./actor.js;
 // import eventExamples from ./event.js;
+
+
+
 
 
 var roll = function(sides){
@@ -15,7 +18,7 @@ var player = {
   agents: [],
   enemies: [],
   places: [],
-  events: [] //added events variable so we dont need another object just for it
+  events: [], //added events variable so we dont need another object just for it
   assets: {
     money: [0,0],
     influence: {
@@ -47,7 +50,7 @@ console.log('☠ Deep State ☠'); //lets use skulls as much as possible ☠☠�
 
 //list all events
 function listEvents(){
-  console.API.clear()
+  console.clear()
   console.log('Current events: (0 to go back)');
   player.events.forEach((e,i)=>{
     console.log((i+1) + ": " + e.title);
@@ -55,7 +58,7 @@ function listEvents(){
 }
 //list all actors
 function listActors(){
-  console.API.clear()
+  console.clear()
   console.log('Available actors: (0 to go back)');
   player.events.forEach((e,i)=>{
     console.log((i+1) + ": " + e.name);
@@ -76,11 +79,11 @@ function selectEvent(){
   if (eInput === 0){
     eContinue = false;
   } else
-  if eInput > 1 && eInput <= player.events - 1){
+  if (eInput > 1 && eInput <= player.events - 1){
     //run selection
     console.log(player.events[eInput]);
   } else
-  if eInput === NaN) {
+  if (eInput === NaN) {
     //error, select valid number
     console.log("Invalid input, press enter to continue");
     raw_input();
@@ -123,22 +126,22 @@ function selectActor(){
 var gContinue = true;
 while(gContinue){
   var input;
-  console.API.clear()
+  console.clear();
   console.log('What will you do?\n Actors: 1    Events: 2   Quit Forever: 3');
-  input = raw_input();
+  input = readline(); //uh oh
 
-  if (input.parseInt() === 1){
+  if (parseInt(input) === 1){
     listActors();
     selectActor();
   } else
-  if (input.parseInt() === 2){
+  if (parseInt(input) === 2){
     selectEvent();
   } else
-  if (input.parseInt() === 3){
+  if (parseInt(input) === 3){
     gContinue = false;
   }
   else{
-   console.API.clear()
+   console.clear();
     console.log('Enter a valid command');
     listDirections();
   }

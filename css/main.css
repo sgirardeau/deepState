@@ -10,3 +10,19 @@ html {
   font-size: .8em;
   background: url("../img/simple_dashed_@2X.png");
 }
+
+h1{
+  float: left;
+  margin-left: auto;
+  margin-top: 20vw;
+  color: white;
+
+}
+h3{
+  clear: both;
+  float: left;
+  margin-right: auto;
+  color: white;
+  margin-top: 5%;
+
+}

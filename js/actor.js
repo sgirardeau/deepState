@@ -85,6 +85,6 @@ var james = new Thug('James', 'Marion', 29, true, 'white', 'usa');
 
 let examples = [scott,steve,ralph,james];
 
-// module.exports = 
-// export {Actor};
+// module.exports =
+export Actor as Actor;
 //export examples as actorExamples;

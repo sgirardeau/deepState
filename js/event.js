@@ -18,5 +18,5 @@ var killDude = new Event('Kill dude', 'Go to the east side and kill dude, he suc
 var tailDude = new Event('Tail dude', 'Go to the west side and follow dude, he sucks.', 2, cash[5], cash[-100], 2, 300,null,tail,0);
 var extortDude = new Event('Extort dude', 'Go to church and steal the colelction plate, it sucks.', 1, cash[100], cash[-100], 1, 300,null,extort,0);
 
-export Event as Event;
-export example as exampleEvents;
+export {Event, example};
+//export example as exampleEvents;

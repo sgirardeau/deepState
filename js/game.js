@@ -1,8 +1,10 @@
-import Actor from ./actor.js;
-import Event from ./event.js;
+//using node syntax for testing in console
 
-import actorExamples from ./actor.js;
-import eventExamples from ./event.js;
+// import Actor from './actor.js';
+// import Event from './event.js';
+//
+// import actorExamples from ./actor.js;
+// import eventExamples from ./event.js;
 
 
 var roll = function(sides){
@@ -69,15 +71,16 @@ function selectEvent(){
   var eContinue = true;
 
   listEvents();
-  eInput = raw_input();
+  eInput = parseInt(raw_input());
 
-  if (eInput.parseInt() === 0){
+  if (eInput === 0){
     eContinue = false;
   } else
-  if eInput.parseInt() > 1 && eInput.parseInt() <= player.events - 1){
+  if eInput > 1 && eInput <= player.events - 1){
     //run selection
+    console.log(player.events[eInput]);
   } else
-  if eInput.parseInt() === NaN) {
+  if eInput === NaN) {
     //error, select valid number
     console.log("Invalid input, press enter to continue");
     raw_input();
@@ -91,14 +94,14 @@ function selectActor(){
 
   listActors();
   while (aContinue === true){
-    aInput = raw_input();
+    aInput = parseInt(raw_input());
 
     if (aInput.parseInt() === 0){
       aContinue = false;
     } else
-    if (aInput.parseInt() > 1 && aInput.parseInt() <= player.actors - 1){
+    if (aInput.parseInt() > 1 && aInput <= player.actors - 1){
       //run selection
-
+      console.log(player.actors[aInput]);
     } else
     if (aInput.parseInt() === NaN) {
       //error, select valid number

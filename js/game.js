@@ -1,18 +1,12 @@
-
-
 // import Actor from './actor.js';
 // import Event from './event.js';
 //
 // import actorExamples from ./actor.js;
 // import eventExamples from ./event.js;
 
-
-
-
-
 var roll = function(sides){
   return Math.round(Math.random() * sides);
-}
+};
 
 var player = {
   agents: [],
@@ -35,11 +29,7 @@ var player = {
     }
   },
   score: 0
-}
-
-
-
-
+};
 
 console.log('☠ Deep State ☠'); //lets use skulls as much as possible ☠☠☠☠☠☠☠
 
@@ -50,7 +40,7 @@ console.log('☠ Deep State ☠'); //lets use skulls as much as possible ☠☠�
 
 //list all events
 function listEvents(){
-  console.clear()
+  console.clear();
   console.log('Current events: (0 to go back)');
   player.events.forEach((e,i)=>{
     console.log((i+1) + ": " + e.title);

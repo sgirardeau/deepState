@@ -21,9 +21,9 @@ class Actor {
       tail: actions.tail,
       recruit: actions.recruit
     };
-  };
+  }
 }
-
+//Thug job type allows for more dirty actions such as killing and extorting actors.
 class Thug extends Actor {
   constructor(first, last, age, gender, race , nat) {
     super(first, last, age, gender, nat);
@@ -35,7 +35,7 @@ class Thug extends Actor {
     this.actions.extort = actions.extort;
   };
 }
-
+//Buinessman Job type adds the ability to launder money. This allows the player to convert dirty money to clean money (usable currency).
 class businessMan extends Actor {
   constructor(first, last, age, gender, race, nat) {
     super(first, last, age, gender, race, nat);
@@ -46,7 +46,7 @@ class businessMan extends Actor {
     this.actions.launder = actions.launder;
   }
 }
-
+//Actions object will hold the logic for various actions that are available to the various actors (based on job type).
 var actions = {
   investigate: function(atk, def) {
     console.log(atk.first + " investigates " + def.first + ".");
@@ -72,7 +72,7 @@ var actions = {
   launder: function(atk) {
     return true;
   },
-}
+};
 //Still looking for how to implement perks. MOAR TO CUM.
 
 
